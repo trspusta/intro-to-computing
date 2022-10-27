@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <title>Length Converter</title>
+<body style="background-color:rgb(204, 83, 120);"></body>
+    <!-- NAVIGATION BAR -->
+    <ul>
+        <li><a href="Homepage.html">Home</a></li>
+<head><h1>Assignment #1 - Conversion (Celsius to Fahrenheit, Fahrenheit to Celsius, Meters to Feet, Feet to Meters)</h1></head>
+<h2 style="background-color:rgb(255, 99, 71);">Fahrenheit to Celsius</h2>
+<p>
+  <p align = "center">
+    <label>Fahrenheit</label>
+    <input id="inputFahrenheit" type="number" placeholder="Fahrenheit"
+    oninput="temperatureConverter1(this.value)"
+    onchange="temperatureConverter1(this.value)">
+  </p>
+  <p align = "center">Celsius: <span id="outputCelsius"></span></p>
+<script>
+    function temperatureConverter1(valNum) {
+  valNum = parseFloat(valNum);
+  document.getElementById("outputCelsius").innerHTML = (valNum-32) / 1.8;
+}
+</script>
+<h2 style="background-color:rgb(255, 99, 71);">Celsius to Fahrenheit</h2>
+<p align = "center">
+    <label>Celsius</label>
+    <input id="inputCelsius" type="number" placeholder="Celsius" oninput="temperatureConverter(this.value)" onchange="temperatureConverter(this.value)">
+  </p>
+  <p align = "center">Fahrenheit: <span id="outputFahrenheit"></span></p>
+<script>
+  function temperatureConverter(valNum) {
+  valNum = parseFloat(valNum);
+  document.getElementById("outputFahrenheit").innerHTML=(valNum*1.8)+32;
+}
+</script>
+<h2 style="background-color:rgb(255, 99, 71);">Feet to Meters</h2>
+<!-- Meters to Feet -->
+<p align = "center">
+    <label>Feet</label>
+    <input id="inputFeet" type="number" placeholder="Feet" oninput="LengthConverter1(this.value)" onchange="LengthConverter1(this.value)">
+  </p>
+  <p align = "center">Meters: <span id="outputMeters"></span></p>
+
+<script>
+    function LengthConverter1(valNum) {
+  document.getElementById("outputMeters").innerHTML=valNum/3.2808;
+}
+</script>
+<h2 style="background-color:rgb(255, 99, 71);">Meters to Feet</h2>
+<!-- Feet to Meter -->
+<p align = "center">
+    <label>Meters</label>
+    <input id="inputMeters" type="number" placeholder="Meters" oninput="LengthConverter(this.value)" onchange="LengthConverter(this.value)">
+  </p>
+  <p align = "center">Feet: <span id="outputFeet"></span></p>
+<script>
+function LengthConverter(valNum) {
+  document.getElementById("outputFeet").innerHTML=valNum*3.2808;
+}
+</script>
+</body>
+</html>

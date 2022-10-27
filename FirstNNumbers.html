@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<li><a href="Homepage.html">Home</a></li>
+<body>
+    <body style="background-color:rgb(236, 76, 210);"></body>
+<div class = "factorial">
+<text align = "center">
+  <h1>Assignment #3 - Factorial, Sum and Average of First N Natural Numbers</h1>
+  </text>
+  <div class = "factorial for N">
+    <!-- factorial of N -->
+    <div class = "factorial">
+        <text align = "center">
+      <h2 style="background-color:rgb(255, 99, 71);">Factorial of N Numbers</h2>
+      <p>
+        <h>Input a value of N</h>
+        <input id= "num">
+        <button onclick="factorial()">Calculate</button>
+        <p>
+        The factorial of N is:<span id="fact"></span>
+      </p>
+    </text>
+    </div>
+
+    <!-- sum of N -->
+    <div class = "sum of N">
+        <text align = "center">
+      <h2 style="background-color:rgb(255, 99, 71);">Sum of the First N Numbers</h2>
+      <p>
+        <label>Input a value of n</label>
+        <input id="num1">
+        <button onclick="sumMo()">Calculate</button>
+      </p>
+      <p>The sum is: <span id="sum"></span></p>
+      </text>
+  </div>
+
+  <!-- average of N -->
+  <div class="average">
+    <text align = "center">
+    <h2 style="background-color:rgb(255, 99, 71);">Average of the First N Numbers</h2>
+    <p>
+      <label>Input a value of n</label>
+      <input id="num2">
+      <button onclick="AverageN()">Calculate</button> 
+      </p>
+      <p>The average is:<span id="sum2"></span>
+    </p>
+    </text>
+</div>
+
+</body>
+<script>
+  function factorial()
+  {
+  var n = document.getElementById("num").value;
+  var i=1, f=1; 
+  while(n>=i){
+    f *= i;
+    i++
+  }
+  document.getElementById("fact").innerHTML = f;
+  }
+  function sumMo()
+  {
+  var n = document.getElementById("num1").value;
+  var i=1, f=0;
+  do{
+    f += i;
+    i++
+  }while(n >= i)
+  document.getElementById("sum").innerHTML = f;
+  }
+  function AverageN()
+  {
+    var x = document.getElementById("num2").value;
+      let nth = document.getElementById("num2").value*1;
+
+      for(let i = 1; i < x; i++){
+        nth += i;
+      }
+      let sum2 = nth/x
+      document.getElementById("sum2").innerHTML = sum2;
+  }
+</script>
+<html>
